@@ -33,18 +33,19 @@ function generatePassword() {
       possibleCharacters = possibleCharacters.concat(num)
     }
 
-    // empty if statement if all character are false
-
     for (var i = 0; i < characterLength; i++) {
       var randomNum = Math.floor(Math.random() * possibleCharacters.length) + 0;
       placeHolder.push(possibleCharacters[randomNum]);
     }
 
-  }
+  } else {
+    alert("Please enter a value between 8 and 128 characters.");
+    generatePassword();
+  };
 
-  
-
-
+  if (!characterUpper && !characterLower && !characterSpecial && !characterNum) {
+    alert("You must choose at least one option")
+  };
 
   return placeHolder.join("");
 }
