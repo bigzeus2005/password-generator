@@ -8,15 +8,15 @@ var num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 // Write password to the #password input
 function generatePassword() {
   var characterLength = parseInt(prompt("Enter a password between 8 and 128 character."));
-  var characterUpper = confirm("Would you like Uppercase characters?");
-  var characterLower = confirm("Would you like lowercase characters?");
-  var characterSpecial = confirm("Would you like special characters?");
-  var characterNum = confirm("Would you like number characters?");
   var possibleCharacters = [];
   var placeHolder = [];
-
+  
   if (characterLength >= 8 && characterLength <= 128) {
-
+    var characterUpper = confirm("Would you like Uppercase characters?");
+    var characterLower = confirm("Would you like lowercase characters?");
+    var characterSpecial = confirm("Would you like special characters?");
+    var characterNum = confirm("Would you like number characters?");
+    
     if (characterUpper) {
       possibleCharacters = possibleCharacters.concat(upper)
     }
